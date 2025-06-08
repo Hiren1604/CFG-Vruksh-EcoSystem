@@ -19,12 +19,12 @@ interface SidebarProps {
 
 const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
   const navItems = [
-    { to: '/dashboard', icon: BarChart3, label: 'Dashboard' },
-    { to: '/courses', icon: BookOpen, label: 'Courses' },
-    { to: '/requests', icon: MessageSquare, label: 'Requests' },
-    { to: '/analytics', icon: BarChart3, label: 'Analytics' },
-    { to: '/settings', icon: Settings, label: 'Settings' },
-    { to: '/profile', icon: User, label: 'Profile' },
+    { to: '/ngo-dashboard', icon: BarChart3, label: 'Dashboard' },
+    { to: '/ngo-courses', icon: BookOpen, label: 'Courses' },
+    { to: '/ngo-requests', icon: MessageSquare, label: 'Requests' },
+    { to: '/ngo-analytics', icon: BarChart3, label: 'Analytics' },
+    { to: '/ngo-settings', icon: Settings, label: 'Settings' },
+    { to: '/ngo-profile', icon: User, label: 'Profile' },
   ];
 
   return (

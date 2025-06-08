@@ -1,9 +1,11 @@
-
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { CoursesContent } from "@/components/CoursesContent";
+import { useNavigate } from "react-router-dom";
 
-const Courses = () => {
+const AdminCourses = () => {
+  const navigate = useNavigate();
+
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-background">
@@ -16,4 +18,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default AdminCourses;

@@ -36,9 +36,7 @@ const LoginForm = ({ title, description, onSignupClick, showSignupButton = true,
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-50 via-white to-cyan-100 p-4">
-      <Card className="w-full max-w-md bg-white/90 backdrop-blur-md border-cyan-200 shadow-2xl animate-fade-in-up">
-        <CardHeader className="space-y-2 text-center">
-          <Button
+      <Button
             variant="ghost"
             onClick={() => navigate('/')}
             className="absolute top-4 left-4 text-cyan-700 hover:bg-cyan-50"
@@ -46,6 +44,9 @@ const LoginForm = ({ title, description, onSignupClick, showSignupButton = true,
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
+      <Card className="w-full max-w-md bg-white/90 backdrop-blur-md border-cyan-200 shadow-2xl animate-fade-in-up">
+        <CardHeader className="space-y-2 text-center">
+          
           <CardTitle className="text-2xl font-bold text-cyan-800">{title}</CardTitle>
           <CardDescription className="text-gray-600">{description}</CardDescription>
         </CardHeader>

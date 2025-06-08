@@ -1,6 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Users, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface Course {
   id: string;
@@ -77,6 +77,8 @@ const dummyCourses: Course[] = [
 ];
 
 export function CoursesContent() {
+  const navigate = useNavigate();
+  
   // Group courses by NGO
   const coursesByNGO = dummyCourses.reduce((acc, course) => {
     if (!acc[course.ngoName]) {
@@ -85,6 +87,10 @@ export function CoursesContent() {
     acc[course.ngoName].push(course);
     return acc;
   }, {} as Record<string, Course[]>);
+
+  const handleViewCourse = (courseId: string) => {
+    navigate(`/ngo-course-detail/${courseId}`);
+  };
 
   return (
     <div className="p-6 space-y-6">
@@ -102,7 +108,11 @@ export function CoursesContent() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {courses.map((course) => (
-                <Card key={course.id} className="border-border/50 hover:shadow-md transition-shadow">
+                <Card 
+                  key={course.id} 
+                  className="border-border/50 hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => handleViewCourse(course.id)}
+                >
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg font-semibold text-foreground flex items-center gap-2">
                       <BookOpen className="w-5 h-5" />

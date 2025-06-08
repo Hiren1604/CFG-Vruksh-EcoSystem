@@ -1,4 +1,3 @@
-
 import { 
   LayoutDashboard, 
   Users, 
@@ -28,32 +27,32 @@ import { Button } from "@/components/ui/button";
 const menuItems = [
   {
     title: "Dashboard",
-    url: "/",
+    url: "/admin-dashboard",
     icon: LayoutDashboard,
   },
   {
     title: "Students",
-    url: "/students",
+    url: "/admin-students",
     icon: Users,
   },
   {
     title: "NGOs",
-    url: "/ngos",
+    url: "/admin-ngos",
     icon: Building2,
   },
   {
     title: "Requests",
-    url: "/requests",
+    url: "/admin-requests",
     icon: FileText,
   },
   {
-    title: "Courses by NGOs",
-    url: "/courses",
+    title: "Courses",
+    url: "/admin-courses",
     icon: BookOpen,
   },
   {
     title: "Analytics",
-    url: "/analytics",
+    url: "/admin-analytics",
     icon: BarChart3,
   },
 ];

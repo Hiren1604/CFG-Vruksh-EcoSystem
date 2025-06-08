@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -66,7 +65,7 @@ const Courses = () => {
   });
 
   const handleViewCourse = (courseId: string) => {
-    navigate(`/course/${courseId}`);
+    navigate(`/ngo-course-detail/${courseId}`);
   };
 
   return (
@@ -79,7 +78,7 @@ const Courses = () => {
           </p>
         </div>
         <Button 
-          onClick={() => navigate('/courses/new')}
+          onClick={() => navigate('/ngo-new-course')}
           className="mt-4 md:mt-0 bg-emerald-500 hover:bg-emerald-600"
         >
           <Plus size={20} className="mr-2" />

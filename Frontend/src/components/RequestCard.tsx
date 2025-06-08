@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Building2, FileText, CheckCircle } from "lucide-react";
@@ -11,14 +10,16 @@ interface Request {
   dateOfUpload: string;
   description: string;
   approvedDate?: string;
+  contextualDescription: string;
 }
 
 interface RequestCardProps {
   request: Request;
   type: 'pending' | 'approved';
+  onReview?: () => void;
 }
 
-export function RequestCard({ request, type }: RequestCardProps) {
+export function RequestCard({ request, type, onReview }: RequestCardProps) {
   const [showReviewModal, setShowReviewModal] = useState(false);
 
   const handleReview = () => {
@@ -63,13 +64,11 @@ export function RequestCard({ request, type }: RequestCardProps) {
           </div>
 
           {type === 'pending' && (
-            <Button 
-              onClick={handleReview}
-              className="w-full"
-              size="sm"
-            >
-              Review
-            </Button>
+            <div className="flex gap-2">
+              <Button variant="default" onClick={onReview}>Review</Button>
+              <Button variant="outline">Approve</Button>
+              <Button variant="outline" className="text-destructive">Reject</Button>
+            </div>
           )}
         </CardContent>
       </Card>

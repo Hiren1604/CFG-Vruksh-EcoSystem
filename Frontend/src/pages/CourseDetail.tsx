@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -122,7 +121,7 @@ const CourseDetail = () => {
       <div className="text-center py-12">
         <h2 className="text-2xl font-bold mb-4">Course Not Found</h2>
         <p className="text-muted-foreground mb-4">The course you're looking for doesn't exist.</p>
-        <Button onClick={() => navigate('/courses')}>
+        <Button onClick={() => navigate('/ngo-courses')}>
           <ArrowLeft size={16} className="mr-2" />
           Back to Courses
         </Button>
@@ -138,7 +137,7 @@ const CourseDetail = () => {
       <div className="flex items-center justify-between">
         <Button 
           variant="outline" 
-          onClick={() => navigate('/courses')}
+          onClick={() => navigate('/ngo-courses')}
           className="mb-4"
         >
           <ArrowLeft size={16} className="mr-2" />

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -91,32 +90,30 @@ const NewCourse = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Course Data:', courseData);
     console.log('Modules:', modules);
     // TODO: Implement course creation
-    navigate('/courses');
+    navigate('/ngo-courses');
   };
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center space-x-4">
-        <Button
-          variant="ghost"
-          onClick={() => navigate('/courses')}
-          className="flex items-center space-x-2"
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Create New Course</h1>
+          <p className="text-muted-foreground mt-2">
+            Add a new course to your educational content.
+          </p>
+        </div>
+        <Button 
+          variant="outline" 
+          onClick={() => navigate('/ngo-courses')}
         >
-          <ArrowLeft size={16} />
-          <span>Back to Courses</span>
+          <ArrowLeft size={16} className="mr-2" />
+          Back to Courses
         </Button>
-      </div>
-
-      <div>
-        <h1 className="text-3xl font-bold">Create New Course</h1>
-        <p className="text-muted-foreground mt-2">
-          Add a new course with modules to help learners grow their skills.
-        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
@@ -289,12 +286,12 @@ const NewCourse = () => {
           </CardContent>
         </Card>
 
-        <div className="flex space-x-4">
-          <Button type="submit" className="bg-emerald-500 hover:bg-emerald-600">
-            Create Course
-          </Button>
-          <Button type="button" variant="outline" onClick={() => navigate('/courses')}>
+        <div className="flex justify-end gap-4">
+          <Button type="button" variant="outline" onClick={() => navigate('/ngo-courses')}>
             Cancel
+          </Button>
+          <Button type="submit">
+            Create Course
           </Button>
         </div>
       </form>
