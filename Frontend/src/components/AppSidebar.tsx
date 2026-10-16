@@ -66,7 +66,7 @@ export function AppSidebar() {
             <span className="text-primary-foreground font-bold text-sm">VE</span>
           </div>
           <div>
-            <h2 className="font-semibold text-foreground">Vruksh Ekatra</h2>
+            <h2 className="font-semibold text-foreground">Ekatra Admin</h2>
             <p className="text-xs text-muted-foreground">Admin Portal</p>
           </div>
         </div>

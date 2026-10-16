@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -78,7 +79,7 @@ const Courses = () => {
           </p>
         </div>
         <Button 
-          onClick={() => navigate('/ngo-new-course')}
+          onClick={() => navigate('/ngo-courses/new')}
           className="mt-4 md:mt-0 bg-emerald-500 hover:bg-emerald-600"
         >
           <Plus size={20} className="mr-2" />
